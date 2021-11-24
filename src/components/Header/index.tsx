@@ -1,10 +1,15 @@
+import React from 'react';
 import { FiPlusSquare } from 'react-icons/fi';
 
 import Logo from '../../assets/logo.svg';
 
 import { Container } from './styles';
 
-const Header = ({ openModal }) => (
+interface IHeaderProps {
+  openModal: () => void;
+}
+
+const Header: React.FC<IHeaderProps> = ({ openModal }) => (
   <Container>
     <header>
       <img src={Logo} alt="GoRestaurant" />
